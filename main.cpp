@@ -10,11 +10,12 @@ int state = 0; // 0 = off, 1 = on
 
 void tx_thread() {
     while (true) {
+        /*
         pc.putc(spedd);
         wait(0.1);
         pc.putc(state);
-        wait(0.1);
-        pc.printf("test %d %d \n", speed,state); //ไว้ดูข้อมูลที่จะส่ง
+        wait(0.1); */
+        pc.printf(">>>> sp:%d, st:%d \n", speed,state); //ไว้ดูข้อมูลที่จะส่ง
         wait(0.1);
         wait(60);
     }
@@ -44,7 +45,7 @@ int main()
     
     while (1) {
         led = !led;
-        pc.printf("%d , %d" , speed,state);
+        pc.printf("Test sp:%d, st:%d \n" , speed,state);
         wait(1);
     }
 }
