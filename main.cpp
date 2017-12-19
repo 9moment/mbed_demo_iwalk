@@ -10,6 +10,10 @@ int state = 0; // 0 = off, 1 = on
 
 void tx_thread() {
     while (true) {
+        pc.putc(spedd);
+        wait(0.1);
+        pc.putc(state);
+        wait(0.1);
         pc.printf("test %d %d \n", speed,state); //ไว้ดูข้อมูลที่จะส่ง
         wait(0.1);
         wait(60);
