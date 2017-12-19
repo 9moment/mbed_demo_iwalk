@@ -12,7 +12,8 @@ double delay = 0.5; // 500 ms
 
 void tx_thread() {
     while (true) {
-        pc.printf("test \n"); //ไว้ดูข้อมูลที่จะส่ง
+        pc.printf("test %d \n", speed); //ไว้ดูข้อมูลที่จะส่ง
+        wait(0.1);
         wait(60);
     }
 }
@@ -20,6 +21,7 @@ void tx_thread() {
 void interrup()
 {
     speed = speed + 1 ;
+    wait(0.1);
     if(speed == 11){
         speed = 0 ;
     }
