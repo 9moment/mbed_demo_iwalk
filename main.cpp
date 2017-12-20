@@ -1,7 +1,8 @@
 #include "mbed.h"
 
 InterruptIn button(USER_BUTTON);
-Serial pc(USBTX, USBRX); //TX, RX
+//Serial pc(USBTX, USBRX); //TX, RX
+Serial pc(D1,D0); //TX, RX
 Thread thread;
 DigitalOut led(LED1);
 
